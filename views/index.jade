@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1= title
+
+    #users
+     ul.user
+        - each user in users
+          - var url = "/message/"+user._id
+            li
+             a(href=url)
+                span.username= user.name
+                span.email= user.email
+        a(href="/user/new")!= "Add New User"

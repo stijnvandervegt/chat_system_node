@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1= title
+    #login.clearfix
+          form( method="post")
+                     div.clearfix
+                         div.clearfix
+                             span.label Name :
+                             input(type="text", name="name", id="loginUserName")
+                         div.clearfix
+                             span.label Password :
+                             input(type="password", name="password", id="loginUserPassword")
+                         div#loginUserSubmit
+                             input(type="submit", value="Login")
+                 a(href="/user/new")!= "Create new User"

@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h1= title
+    #login
+        form( method="post")
+            div.clearfix
+                div.clearfix
+                    span.label Title :
+                    input(type="text", name="name", id="editUserName")
+                div.clearfix
+                    span.label Email :
+                    input(type="email", name="email", id="editUserEmail")
+                div.clearfix
+                    span.label Password :
+                    input(type="password", name="password", id="editUserPassword")
+                div#editUserSubmit
+                    input(type="submit", value="Save")
+        a(href="/list")!= "Back to User List"

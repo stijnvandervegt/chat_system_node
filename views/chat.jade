@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    h1= title
+    #messages
+        - each message in messages
+            div.clearfix
+                - if(user_connect_id == message.user_id)
+                    -var classname = 'in';
+                - else
+                    -var classname = 'out';
+                div(class=classname)
+                    span.name= message.username + ': '
+                    span.message= message.message
+
+    div.send_chat
+        input(type="text", name="message", id="newMessage")
+        input(type="hidden", name="user_id", id="user_id", value= user_id)
+        input(type="hidden", name="user_connect_id", id="user_connect_id", value= user_connect_id)
+        input(type="hidden", name="username", id="username", value= username)
+        input(type="button", id="send", value="Send")
+
+    a(href="/list") Back to list

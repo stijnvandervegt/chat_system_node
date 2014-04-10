@@ -1,0 +1,128 @@
+*
+    padding 0
+    border 0
+    margin 0
+body
+  padding: 50px
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+  font-size 13px
+  text-stroke 1px rgba(255, 255, 255, 0.1)
+  color #555
+a
+  color: #00B7FF
+h1, h2
+  margin 0
+  font-size 22px
+  color #343434
+  text-align center
+h1
+  text-shadow 1px 2px 2px #ddd
+  font-size 24px
+#login
+    width 400px
+    position relative
+    background #fff
+    margin auto
+    padding 10px
+    border-radius 3px
+    border 1px solid #ddd
+  input[type =text], input[type =password], input[type =email]
+    width 200px
+    background #eee !important
+    height:25px;
+    float right
+    padding 0
+    margin 0
+    margin-bottom 10px
+    padding 3px 4px
+    border:1px solid #ddd
+  span.label
+    float:left;
+    width:100px;
+    height:25px;
+    line-height:25px;
+    display:block;
+  input[type =submit]
+    float:right;
+    padding:10px;
+    color:#fff;
+    background:green;
+    cursor:pointer;
+    border-radius:3px;
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+#users {
+    width:400px;
+    margin:auto;
+    position:relative;
+    ul {
+        li {
+            list-style:none;
+            a {
+                text-decoration:none;
+                color:#000;
+                display:block;
+                width:100%;
+                background:#eee;
+                border-bottom:1px solid #999;
+                padding:10px;
+                span {
+                    display:block;
+                }
+                span.username {
+                    font-weight:bold;
+                }
+            }
+        }
+    }
+}
+#messages {
+    width:400px;
+    margin:auto;
+    border:1px solid #999;
+    padding:15px;
+    height:200px;
+    overflow-y:scroll
+    position:relative;
+    div.in {
+        float:left;
+
+    }
+    div.out {
+        float:right;
+    }
+    span.name {
+        font-weight:bold;
+    }
+    span#writing {
+        font-style:italic;
+        position:absolute;
+        bottom:0;
+        font-size:10px;
+    }
+}
+div.send_chat {
+    display:block;
+    width:430px;
+    margin:auto;
+    position:relative;
+    input[type =text] {
+        float:none;
+        padding:15px;
+        width:325px;
+        left:0;
+        margin:0;
+    }
+    input[type =button] {
+        padding:17px;
+        background:green;
+        color:#fff;
+        border-radius:3px;
+        cursor:pointer;
+    }
+}
