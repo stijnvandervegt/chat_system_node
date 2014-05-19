@@ -85,7 +85,7 @@ var Chat    = Chat || {};
                 span.appendChild(content);
                 message_box.append(span);
             } else {
-                this.deleteWritingMessage();
+                Chat.handlers.deleteWritingMessage();
             }
         },
         deleteWritingMessage: function() {

@@ -62,7 +62,6 @@ Socket.handlers.setEmit('message', function(message) {
     message.created_at  = jsonDate;
 
     Provider.query.save('messages', message, function( error, docs) {
-        console.log(docs);
 
     });
 
@@ -77,8 +76,6 @@ Socket.handlers.setEmit('message', function(message) {
 Socket.handlers.setEmit('user_write', function(user, show) {
     var user = user.user_connect_id+'-'+user.user_id;
 
-    console.log(user);
-    console.log(show);
     if(show == true) {
         if(Socket.controller.users[user]) {
             if(Socket.controller.writing[user]) {
@@ -166,9 +163,6 @@ app.get('/list', function (req, res) {
 // chat
 app.get('/message/:id', function (req, res) {
 
-    console.log(req.session.user._id);
-    console.log(req.params['id']);
-
     var search_object = {
         user_id: {$in: [req.session.user._id, req.params['id']]} ,
         user_connect_id: {$in: [req.session.user._id, req.params['id']]}
@@ -194,7 +188,7 @@ app.get('/message/:id', function (req, res) {
 
         Provider.query.getById('users', search_object, function(error, docs) {
             if(error) {
-                console.log(error);
+
                 return false;
             }
 
