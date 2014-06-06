@@ -63,7 +63,7 @@ Provider.query = {
             }
         });
     },
-     : function(collection, data, callback) {
+    save: function(collection, data, callback) {
         Provider.config.getCollection(collection, function(error, selected_collection) {
 
             if( error )  {
