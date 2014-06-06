@@ -1,4 +1,4 @@
-chat_system_node
+Chat systeem nodejs
 ================
 
 School project srp chat systeem gemaakt met nodejs
